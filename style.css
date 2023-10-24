@@ -113,7 +113,7 @@ ol li a{
 height: 100%;
 width: 100%;
 position: absolute;
-background: url(/img/banner.jpg);
+background: url(img/banner.jpg);
 background-size: cover;
 background-position: center;
 filter: brightness(40%);
@@ -447,7 +447,7 @@ main h2 ::before{
         width: 25px;
         margin: auto 0;
         cursor: pointer;
-        background: url(/img/menubar.jpg);
+        background: url(img/menubar.jpg);
         background-size: 25px;
         background-position: center;
         filter: invert(1);

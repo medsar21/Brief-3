@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <title>Join Us - FitZone</title>
+</head>
+<body>
+    <!--navbar-->
+    <div class="navbar">
+        <a href="index.html" class="logo">F<B>Z</B></a>
+        <div class="toggle" onclick="navToggle();"></div> 
+      
+        <ol>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="programme.html">PROGRAMMES</a></li>
+            <li><a href="galerie.html">GALERIE</a></li>
+            <li><a href="#" class="join-button" onclick="navToggle();">JOIN NOW</a></li>
+        </ol>
+    </div>
+    <section id="join" class="join-us view">
+        <div class="main">
+            <h2><span>J</span>oin Us</h2>
+            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, laudantium.</h6>
+        </div>
+        <div class="content">
+            <div class="join-form">
+                <h3>Get Started Today</h3>
+                <p>Join our community and start your fitness journey with us!</p>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+                    </div>
+                    <button type="submit">Join Now</button>
+                </form>
+            </div>
+            <div class="join-image">
+                <img src="img/alonso-reyes-0HlI76m4jxU-unsplash.jpg" alt="Join Us Image">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="copyright">
+            &copy; 2023 FitZone. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle("sticky", window.scrollY > 50);
+        });
+    
+        const togglebar = document.querySelector('.toggle');
+        const menu = document.querySelector('ol');
+    
+        function navToggle() {
+            togglebar.classList.toggle("active");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

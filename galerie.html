@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <title>Galerie - FitZone</title>
+</head>
+<body>
+    <!--navbar-->
+    <div class="navbar">
+        <a href="index.html" class="logo">F<B>Z</B></a>
+        <div class="toggle" onclick="navToggle();"></div> 
+      
+        <ol>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="programme.html">PROGRAMMES</a></li>
+            <li><a href="#" onclick="navToggle();">GALERIE</a></li>
+            <li><a href="joinus.html" class="join-button" onclick="navToggle();">JOIN NOW</a></li>
+        </ol>
+    </div>
+    <section id="galerie" class="galerie view">
+        <div class="main">
+            <h2><span>G</span>alerie</h2>
+            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, laudantium.</h6>
+        </div>
+        <div class="content">
+            <div class="frame">
+                <div class="box">
+                    <img src="img/trainer1.jpg" alt="">
+                </div>
+                <div class="headline">
+                    <div class="title">someone famous</div>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+
+            <div class="frame">
+                <div class="box">
+                    <img src="img/trainer2.jpg" alt="">
+                </div>
+                <div class="headline">
+                    <div class="title">someone famous</div>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+
+            <div class="frame">
+                <div class="box">
+                    <img src="img/trainer3.jpg" alt="">
+                </div>
+                <div class="headline">
+                    <div class="title">someone famous</div>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+
+            <div class="frame">
+                <div class="box">
+                    <img src="img/trainer4.jpg" alt="">
+                </div>
+                <div class="headline">
+                    <div class="title">someone famous</div>
+                    <div class "icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="copyright">
+            &copy; 2023 FitZone. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle("sticky", window.scrollY > 50);
+        });
+    
+        const togglebar = document.querySelector('.toggle');
+        const menu = document.querySelector('ol');
+    
+        function navToggle() {
+            togglebar.classList.toggle("active");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

@@ -80,7 +80,8 @@ ol li a{
     display: inline-flex; 
     align-items: center; 
 }
-
+ 
+ 
 .join-button {
     display: inline-block;
     padding: 10px 20px;
@@ -242,10 +243,43 @@ main h2 ::before{
     width: 100%;
     object-fit: cover;
 }
-.workout .content{
+.faq {
+    background: #222;
+    border: 1px solid var(--prime);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.faq h3 {
+    font-size: 20px;
+    color: var(--prime);
+    margin: 0;
+    padding: 5px 0;
+}
+
+.faq p {
+    display: none; 
+}
+.faq.active h3::after {
+    content: '\25BC'; 
+}
+.faq:hover {
+    background: var(--prime);
+}
+.faq:hover h3 {
+    color: #fff;
+}
+.faq.active {
+    background: var(--prime);
+}
+.faq.active h3 {
+    color: #fff;
+}
+.programme .content{
     flex-wrap: wrap;
 }
-.workout .content .frame{
+.programme .content .frame{
     position: relative;
     width: 350px;
     padding: 20px;
@@ -253,13 +287,13 @@ main h2 ::before{
     background: #222;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
-.workout .content .frame .box{
+.programme .content .frame .box{
     position: relative;
     height: 200px;
     width: 100%;
     overflow: hidden;
 }
-.workout .content .frame .box img{
+.programme .content .frame .box img{
     position: absolute;
     height: 100%;
     width: 100%;
@@ -267,15 +301,15 @@ main h2 ::before{
     filter: brightness(80%);
     transition: 0.2s ease-in;
 }
-.workout .content .frame .box:hover img{
+.programme .content .frame .box:hover img{
    filter: brightness(100%);
    transform: scale(1.09);
 }
-.workout .content .frame .title{
+.programme .content .frame .title{
     color: var(--prime);
     padding: 5px 0;
 }
-.workout .content .frame  p{
+.programme .content .frame  p{
     font-size:0.8em;
 }
 .galerie .content{
@@ -436,13 +470,36 @@ main h2 ::before{
     margin: 0 auto; 
 }
 @media screen and (max-width: 900px) {
-    .navbar{
-       padding: 0 60px; 
+    .navbar {
+        padding: 0 60px;
     }
-    .navbar ol{
+
+    .navbar ol {
         display: none;
     }
-    .navbar .toggle{
+
+    .navbar ol.active {
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        position: fixed;
+        background: #222;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: calc(100% - 60px);
+    }
+
+    .navbar ol.active li {
+        margin: 8px;
+    }
+
+    .navbar ol.active li a {
+        font-size: 25px;
+    }
+
+    .navbar .toggle {
         height: 25px;
         width: 25px;
         margin: auto 0;
@@ -453,6 +510,141 @@ main h2 ::before{
         filter: invert(1);
         background-repeat: no-repeat;
     }
+
+    .navbar .toggle.active {
+        background: url(img/close.png);
+        background-size: 40px;
+        background-position: center;
+        cursor: pointer;
+        filter: invert(1);
+    }
+
+    .hieght h3 {
+        font-size: 3vw;
+        padding: 5px 10px;
+        border-left: 3px solid var(--prime);
+    }
+
+    .hieght h1 {
+        font-size: 16vw;
+    }
+
+    .hieght .join {
+        font-size: 1.8vw;
+        border: 1px solid var(--prime);
+    }
+
+    .main h2 {
+        font-size: 1.5rem;
+    }
+
+    .main h6 {
+        font-size: 10px;
+    }
+
+    .about .content {
+        flex-direction: column;
+    }
+
+    .about .content .cols p b {
+        font-size: 20px;
+        margin-right: 2px;
+    }
+
+    .about .content .cols a {
+        font-size: 20px;
+        position: relative;
+        top: 20px;
+    }
+    
+    .about .content .cols .box {
+        height: 250px;
+    }
+
+    .workout .content .frame {
+        width: 260px;
+        padding: 18px;
+    }
+    .galerie .content .frame {
+        width: 350px;
+        padding: 15px 15px 40px 15px;
+        margin: 10px 5px;
+    }
+    .galerie .content .frame .box {
+        height: 200px;
+    }
+    .trainers .content .frame a {
+        border: 1.5px solid var(--prime);
+    }
+    .join-us.view {
+        padding: 20px 0;
+    }
+
+    .join-us .main h2 {
+        font-size: 24px;
+    }
+
+    .join-us .main h6 {
+        font-size: 14px;
+    }
+
+    .join-us .content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .join-us .join-form {
+        padding: 10px;
+    }
+
+    .join-us .join-form h3 {
+        font-size: 20px;
+    }
+
+    .join-us .join-form p {
+        font-size: 12px;
+    }
+
+    .join-us label,
+    .join-us input[type="text"],
+    .join-us input[type="email"],
+    .join-us input[type="tel"],
+    .join-us button {
+        width: 100%;
+    }
+    .faq h3 {
+        font-size: 16px;
+    }
+
+    .faq p {
+        font-size: 14px;
+    }
+    .faq .faq-toggle {
+        cursor: pointer;
+        background: #333;
+        color: var(--prime);
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        outline: none;
+        user-select: none;
+    }
+    
+    .faq .faq-content {
+        display: none;
+        font-size: 16px;
+        margin-top: 10px;
+        padding: 10px;
+        background: #222;
+        border-radius: 5px;
+    }    
 }
+
+
 
 

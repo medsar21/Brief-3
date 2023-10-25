@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <title>Programmes - FitZone</title>
+</head>
+<body>
+    <!--navbar-->
+    <div class="navbar">
+        <a href="index.html" class="logo">F<B>Z</B></a>
+        <div class="toggle" onclick="navToggle();"></div> 
+      
+        <ol>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="#" onclick="navToggle();" >PROGRAMMES</a></li>
+            <li><a href="galerie.html" onclick="navToggle();">GALERIE</a></li>
+            <li><a href="joinus.html" class="join-button" onclick="navToggle();">JOIN NOW</a></li>
+        </ol>
+    </div>
+    <section id="programme" class="programme view">
+        <div class="main">
+            <h2><span>P</span>rogrammes</h2>
+            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, laudantium.</h6>           
+        </div>
+        <div class="content">
+            <div class="frame">
+                <div class="box">
+                    <img src="img/workout1.jpg" alt="">
+                </div>
+                <div class="title">someone famous</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="frame">
+                <div class="box">
+                    <img src="img/workout2.jpg" alt="">
+                </div>
+                <div class="title">someone famous</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="frame">
+                <div class="box">
+                    <img src="img/workout3.jpg" alt="">
+                </div>
+                <div class="title">someone famous</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="frame">
+                <div class="box">
+                    <img src="img/workout4.jpg" alt="">
+                </div>
+                <div class="title">someone famous</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="frame">
+                <div class="box">
+                    <img src="img/workout5.jpg" alt="">
+                </div>
+                <div class="title">someone famous</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="frame">
+                <div class="box">
+                    <img src="img/workout6.jpg" alt="">
+                </div>
+                <div class="title">someone famous</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="copyright">
+            &copy; 2023 FitZone. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle("sticky", window.scrollY > 50);
+        });
+    
+        const togglebar = document.querySelector('.toggle');
+        const menu = document.querySelector('ol');
+    
+        function navToggle() {
+            togglebar.classList.toggle("active");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

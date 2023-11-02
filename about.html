@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     <title>About Us - FitZone</title>
 </head>
+
 <body>
     <!--navbar-->
     <div class="navbar">
         <a href="index.html" class="logo">F<B>Z</B></a>
-        <div class="toggle" onclick="navToggle();"></div> 
-      
+        <div class="toggle" onclick="navToggle();"></div>
+
         <ol>
             <li><a href="index.html">HOME</a></li>
             <li><a href="#" onclick="navToggle();">ABOUT</a></li>
-            <li><a href="programme.html" onclick="navToggle();" >PROGRAMMES</a></li>
+            <li><a href="programme.html" onclick="navToggle();">PROGRAMMES</a></li>
             <li><a href="galerie.html" onclick="navToggle();">GALERIE</a></li>
             <li><a href="joinus.html" class="join-button" onclick="navToggle();">JOIN NOW</a></li>
         </ol>
@@ -27,11 +29,22 @@
     <section id="about" class="about view">
         <div class="main">
             <h2><span>A</span>bout Us</h2>
-            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, laudantium.</h6>           
+            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, laudantium.</h6>
         </div>
         <div class="content">
             <div class="cols">
-                <p><b>L</b>orem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nostrum sint, dolorem tempore aperiam nesciunt. Natus, dolorem eos. Repellendus rem sint sit ab accusantium provident sapiente similique architecto. Ipsum est iste quis impedit fugiat voluptatibus hic incidunt molestias dolore pariatur ullam, vitae sunt suscipit odit omnis, aliquam neque ut temporibus quod voluptates tempore similique, animi quasi! Recusandae quia velit porro magni veritatis sint enim corrupti placeat reprehenderit laudantium itaque, deleniti iure eum minima accusantium sed cupiditate suscipit, eveniet ducimus repellendus dolorem libero repellat nemo? Enim quam quos atque in magni qui inventore dolor expedita, laudantium commodi iste exercitationem quas harum aperiam maxime, ducimus consequuntur labore ex! Ut natus dolorum voluptate, recusandae eius laudantium et doloremque culpa expedita, numquam officia non. Commodi reiciendis voluptates, veniam odio, quos dolorem et quam repellendus, similique deleniti nemo? A, vel. Voluptates debitis voluptate, aperiam consequuntur, recusandae, eos est et assumenda suscipit perferendis ad autem non?</p>
+                <p><b>L</b>orem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nostrum sint, dolorem
+                    tempore aperiam nesciunt. Natus, dolorem eos. Repellendus rem sint sit ab accusantium provident
+                    sapiente similique architecto. Ipsum est iste quis impedit fugiat voluptatibus hic incidunt
+                    molestias dolore pariatur ullam, vitae sunt suscipit odit omnis, aliquam neque ut temporibus quod
+                    voluptates tempore similique, animi quasi! Recusandae quia velit porro magni veritatis sint enim
+                    corrupti placeat reprehenderit laudantium itaque, deleniti iure eum minima accusantium sed
+                    cupiditate suscipit, eveniet ducimus repellendus dolorem libero repellat nemo? Enim quam quos atque
+                    in magni qui inventore dolor expedita, laudantium commodi iste exercitationem quas harum aperiam
+                    maxime, ducimus consequuntur labore ex! Ut natus dolorum voluptate, recusandae eius laudantium et
+                    doloremque culpa expedita, numquam officia non. Commodi reiciendis voluptates, veniam odio, quos
+                    dolorem et quam repellendus, similique deleniti nemo? A, vel. Voluptates debitis voluptate, aperiam
+                    consequuntur, recusandae, eos est et assumenda suscipit perferendis ad autem non?</p>
                 <a href="#">more</a>
             </div>
             <div class="cols">
@@ -40,25 +53,61 @@
                 </div>
             </div>
         </div>
-    <footer>
-        <div class="copyright">
-            &copy; 2023 FitZone. All rights reserved.
-        </div>
-    </footer>
-    <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            navbar.classList.toggle("sticky", window.scrollY > 50);
-        });
+        <section>
+            <h2 class="title">FAQ</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Q1. What is an FAQ?</div>
+                    <div class="faq-answer">A1. FAQ stands for Frequently Asked Questions. It is a list of common
+                        questions and answers on a particular topic.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q2. How do I create an accordion?</div>
+                    <div class="faq-answer">A2. You can create an accordion using HTML, CSS, and JavaScript. Here's an
+                        example code.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q3. Can I customize the styles?</div>
+                    <div class="faq-answer">A3. Yes, you can customize the accordion styles by modifying the CSS in the
+                        provided example.</div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="copyright">
+                &copy; 2023 FitZone. All rights reserved.
+            </div>
+        </footer>
+        <script>
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                navbar.classList.toggle("sticky", window.scrollY > 50);
+            });
 
-        const togglebar = document.querySelector('.toggle');
-        const menu = document.querySelector('ol'); // Changed 'ol' to 'ol'
+            const togglebar = document.querySelector('.toggle');
+            const menu = document.querySelector('ol'); // Changed 'ol' to 'ol'
 
-        function navToggle() {
-            togglebar.classList.toggle("active");
-            menu.classList.toggle("active");
-        }
-    </script>
-    
+            function navToggle() {
+                togglebar.classList.toggle("active");
+                menu.classList.toggle("active");
+            }
+
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+
+                question.addEventListener('click', () => {
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                    } else {
+                        answer.style.display = 'block';
+                    }
+                });
+            });
+        </script>
+
 </body>
+
 </html>

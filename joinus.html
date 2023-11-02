@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     <title>Join Us - FitZone</title>
 </head>
+
 <body>
     <!--navbar-->
     <div class="navbar">
         <a href="index.html" class="logo">F<B>Z</B></a>
-        <div class="toggle" onclick="navToggle();"></div> 
-      
+        <div class="toggle" onclick="navToggle();"></div>
+
         <ol>
             <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">ABOUT</a></li>
@@ -33,18 +35,22 @@
             <div class="join-form">
                 <h3>Get Started Today</h3>
                 <p>Join our community and start your fitness journey with us!</p>
-                <form>
+                <form onsubmit="return validate()">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder="Your Name">
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="text" id="email" name="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="cin">CIN:</label>
+                        <input type="text" id="cin" name="cin" placeholder="CIN">
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+                        <input type="text" id="phone" name="phone" placeholder="Your Phone">
                     </div>
                     <button type="submit">Join Now</button>
                 </form>
@@ -60,18 +66,57 @@
         </div>
     </footer>
     <script>
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
             navbar.classList.toggle("sticky", window.scrollY > 50);
         });
-    
+
         const togglebar = document.querySelector('.toggle');
         const menu = document.querySelector('ol');
-    
+
         function navToggle() {
             togglebar.classList.toggle("active");
             menu.classList.toggle("active");
         }
+
+        function validate() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var cin = document.getElementById("cin").value;
+
+            // Regular expressions for validation
+            var nameRegex = /^[A-Za-z\s]+$/;
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            var phoneRegex = /^\+212\s?[5-7]\d{8}$/;
+            var cinRegex = /^[A-Z]{2}\d{5}$/;
+
+            if (!name.match(nameRegex)) {
+                alert("Please enter a valid name.");
+                return false;
+            }
+
+            if (!email.match(emailRegex)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (!phone.match(phoneRegex)) {
+                alert("Please enter a valid 10-digit phone number (+212).");
+                return false;
+            }
+
+            if (!cin.match(cinRegex)) {
+                alert("Please enter a valid CIN (AA12345).");
+                return false;
+            }
+
+            
+            alert("Register complete!");
+            return true;
+        }
     </script>
+
 </body>
+
 </html>

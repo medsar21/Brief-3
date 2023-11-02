@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
- *{
+
+* {
     margin: 0;
     padding: 0;
-    font-family:'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
     box-sizing: border-box;
     outline: none;
     color: #fff;
- }
-:root{
+}
+
+:root {
     --prime: #00ff34
 }
-body{
+
+body {
     background-color: #131b2b;
 }
-.navbar{
+
+.navbar {
     width: 100%;
     display: flex;
     position: fixed;
@@ -23,53 +27,62 @@ body{
     z-index: 1111;
     transition: 0.5s ease;
 }
-.navbar .sticky{
-   padding: 6px 60px; 
-   background: #0c1518;
-   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+
+.navbar .sticky {
+    padding: 6px 60px;
+    background: #0c1518;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
-.navbar .sticky .logo{
+
+.navbar .sticky .logo {
     font-size: 2em;
     color: var(--prime);
 }
-.navbar .sticky .logo B{
+
+.navbar .sticky .logo B {
     color: #fff;
 }
-.logo{
+
+.logo {
     font-size: 2.8em;
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: none;
 }
-.logo B{
- color: var(--prime);
+
+.logo B {
+    color: var(--prime);
 }
-ol{
+
+ol {
     display: flex;
-    margin: auto 0;    
+    margin: auto 0;
 }
-ol li{
+
+ol li {
     list-style: none;
     margin-right: 20px;
 }
-ol li a{
+
+ol li a {
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
     text-transform: capitalize;
 }
+
 .navbar ol {
     display: flex;
     margin: auto 0;
-    align-items: center; 
+    align-items: center;
 }
 
 .navbar ol li {
     list-style: none;
     margin-right: 20px;
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 
 .navbar ol li a {
@@ -77,11 +90,11 @@ ol li a{
     font-weight: 500;
     text-decoration: none;
     text-transform: capitalize;
-    display: inline-flex; 
-    align-items: center; 
+    display: inline-flex;
+    align-items: center;
 }
- 
- 
+
+
 .join-button {
     display: inline-block;
     padding: 10px 20px;
@@ -98,34 +111,53 @@ ol li a{
 }
 
 
-.view{
+.view {
     width: 100%;
     min-height: 80vh;
     position: relative;
 }
-.home{
+
+.home {
     display: flex;
     min-height: 120vh;
     align-items: center;
     justify-content: center;
-    clip-path: polygon(0 0,100% 0,100% 100%,80% 95%,0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 95%, 0 100%);
 }
-.banner{
-height: 100%;
-width: 100%;
-position: absolute;
-background: url(img/banner.jpg);
-background-size: cover;
-background-position: center;
-filter: brightness(40%);
+
+section {
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.hieght{
+
+.title {
+    font-size: 3rem;
+    margin: 2rem 0rem;
+}
+
+.banner {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(img/banner.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(40%);
+}
+
+.hieght {
     width: 70%;
     position: relative;
     display: inline-block;
     z-index: 11;
 }
-.hieght h3{
+
+.hieght h3 {
     display: inline;
     font-size: 2vw;
     padding: 5px 20px;
@@ -133,22 +165,27 @@ filter: brightness(40%);
     text-transform: capitalize;
     border-left: 6px solid var(--prime);
 }
-.hieght h1{
+
+.hieght h1 {
     font-size: 9vw;
     text-align: center;
     font-weight: normal;
 }
+
 .hieght b {
     color: var(--prime);
     font-weight: 800;
     font-family: sans-serif;
-}.hieght .tagline{
+}
+
+.hieght .tagline {
     color: #d7d7d7;
     font-size: 1.2vw;
     text-align: center;
     font-weight: normal;
 }
-.hieght .join{
+
+.hieght .join {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -162,28 +199,33 @@ filter: brightness(40%);
     text-transform: uppercase;
     transition: 0.3s ease;
 }
-.hieght .join:hover{
+
+.hieght .join:hover {
     color: #fff;
     cursor: pointer;
     letter-spacing: 1.5px;
     background: var(--prime);
 }
-.main{
+
+.main {
     width: 100%;
     text-align: center;
     padding-bottom: 20px;
 }
-.main h2{
+
+.main h2 {
     font-size: 2.5vw;
     position: relative;
     text-align: center;
     padding-top: 100px;
     display: inline-block;
 }
-span{
+
+span {
     color: var(--prime);
 }
-main h2 ::before{
+
+main h2 ::before {
     position: absolute;
     content: '';
     background: var(--prime);
@@ -193,30 +235,72 @@ main h2 ::before{
     bottom: 0;
     border-radius: 50px;
 }
-.main h6{
+
+.main h6 {
     margin-top: 10px;
     font-size: 13px;
     font-family: sans-serif;
     font-weight: lighter;
 }
-.content{
+
+.customers-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.customer-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+svg{
+    width: 30px;
+    height: 30px;
+}
+
+.content-flex{
+    display: flex;
+}
+
+.text {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.author {
+    font-size: 14px;
+    color: #888;
+}
+
+.content {
     position: relative;
     display: flex;
     width: 100%;
     padding: 0 30px;
     justify-content: center;
 }
-.about .content .cols{
+
+.about .content .cols {
     position: relative;
     width: 100%;
     height: 100%;
     padding: 20px 70px;
 }
-.about .content .cols p b{
+
+.about .content .cols p b {
     font-size: 20px;
     margin-right: 2px;
 }
-.about .content .cols a{
+
+.about .content .cols a {
     position: relative;
     top: 20px;
     color: #fff;
@@ -226,16 +310,19 @@ main h2 ::before{
     text-decoration: none;
     text-transform: capitalize;
 }
-.about .content .cols a:hover{
+
+.about .content .cols a:hover {
     color: black;
     background: #fff;
 }
-.about .content .cols .box{
+
+.about .content .cols .box {
     position: relative;
     height: 550px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
-.about .content .cols .box img{
+
+.about .content .cols .box img {
     position: absolute;
     top: 0;
     left: 0;
@@ -243,43 +330,40 @@ main h2 ::before{
     width: 100%;
     object-fit: cover;
 }
-.faq {
-    background: #222;
-    border: 1px solid var(--prime);
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
-    cursor: pointer;
-}
-.faq h3 {
-    font-size: 20px;
-    color: var(--prime);
-    margin: 0;
-    padding: 5px 0;
+
+.faq-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 30px;
 }
 
-.faq p {
-    display: none; 
+.faq-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
 }
-.faq.active h3::after {
-    content: '\25BC'; 
+
+.faq-question {
+    padding: 10px;
+    background-color: var(--prime);
+    cursor: pointer;
+
 }
-.faq:hover {
-    background: var(--prime);
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    transition: ease 2s;
 }
-.faq:hover h3 {
-    color: #fff;
-}
-.faq.active {
-    background: var(--prime);
-}
-.faq.active h3 {
-    color: #fff;
-}
-.programme .content{
+
+.programme .content {
     flex-wrap: wrap;
 }
-.programme .content .frame{
+
+.programme .content .frame {
     position: relative;
     width: 350px;
     padding: 20px;
@@ -287,13 +371,15 @@ main h2 ::before{
     background: #222;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
-.programme .content .frame .box{
+
+.programme .content .frame .box {
     position: relative;
     height: 200px;
     width: 100%;
     overflow: hidden;
 }
-.programme .content .frame .box img{
+
+.programme .content .frame .box img {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -301,21 +387,26 @@ main h2 ::before{
     filter: brightness(80%);
     transition: 0.2s ease-in;
 }
-.programme .content .frame .box:hover img{
-   filter: brightness(100%);
-   transform: scale(1.09);
+
+.programme .content .frame .box:hover img {
+    filter: brightness(100%);
+    transform: scale(1.09);
 }
-.programme .content .frame .title{
+
+.programme .content .frame .title {
     color: var(--prime);
     padding: 5px 0;
 }
-.programme .content .frame  p{
-    font-size:0.8em;
+
+.programme .content .frame p {
+    font-size: 0.8em;
 }
-.galerie .content{
+
+.galerie .content {
     flex-wrap: wrap;
 }
-.galerie .content .frame{
+
+.galerie .content .frame {
     position: relative;
     width: 350px;
     padding: 20px;
@@ -323,13 +414,15 @@ main h2 ::before{
     background: #222;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
-.galerie .content .frame .box{
+
+.galerie .content .frame .box {
     position: relative;
     height: 200px;
     width: 100%;
     overflow: hidden;
 }
-.galerie .content .frame .box img{
+
+.galerie .content .frame .box img {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -337,20 +430,24 @@ main h2 ::before{
     object-fit: cover;
     transition: 0.2s ease-in;
 }
-.galerie .content .frame .box:hover img{
+
+.galerie .content .frame .box:hover img {
     filter: brightness(100%);
-    transform: scale(1.09);  
+    transform: scale(1.09);
 }
-.galerie .content .frame .title{
+
+.galerie .content .frame .title {
     color: var(--prime);
     padding: 5px 0;
 }
-.galerie .content .frame  p{
-    font-size:0.8em;
+
+.galerie .content .frame p {
+    font-size: 0.8em;
     position: relative;
     bottom: 5px;
 }
-.galerie .content .frame  .btn{
+
+.galerie .content .frame .btn {
     top: 5px;
     color: var(--prime);
     background: transparent;
@@ -362,15 +459,16 @@ main h2 ::before{
     text-transform: capitalize;
     transition: 0.2s ease;
 }
-.galerie .content .frame  .btn:hover{
+
+.galerie .content .frame .btn:hover {
     color: #fff;
     background: var(--prime);
-    }
+}
 
-   
+
 .join-us.view {
-    background-color: #131b2b; 
-    color: #fff; 
+    background-color: #131b2b;
+    color: #fff;
     padding: 50px 0;
 }
 
@@ -379,12 +477,12 @@ main h2 ::before{
 }
 
 .join-us h2 {
-    font-size: 32px; 
-    color: var(--prime); 
+    font-size: 32px;
+    color: var(--prime);
 }
 
 .join-us h6 {
-    font-size: 16px; 
+    font-size: 16px;
 }
 
 .join-us .content {
@@ -400,16 +498,16 @@ main h2 ::before{
 .join-us .join-form {
     flex: 1;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }
 
 .join-us .join-form h3 {
-    font-size: 24px; 
+    font-size: 24px;
 }
 
 .join-us .join-form p {
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 .join-us .join-form form {
@@ -430,17 +528,17 @@ main h2 ::before{
 .join-us input[type="tel"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #333; 
-    color: #fff; 
+    background-color: #333;
+    color: #fff;
 }
 
 .join-us button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--prime); 
-    color: #fff; 
+    background-color: var(--prime);
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -448,7 +546,7 @@ main h2 ::before{
 }
 
 .join-us button:hover {
-    background-color: var(--accent); 
+    background-color: var(--accent);
 }
 
 .join-us .join-image {
@@ -461,14 +559,16 @@ main h2 ::before{
     height: auto;
     border-radius: 5px;
 }
+
 .copyright {
-    color: var(--prime); 
+    color: var(--prime);
     text-align: center;
-    font-size: 16px; 
+    font-size: 16px;
     padding: 10px 0;
-    width: 50%; 
-    margin: 0 auto; 
+    width: 50%;
+    margin: 0 auto;
 }
+
 @media screen and (max-width: 900px) {
     .navbar {
         padding: 0 60px;
@@ -556,7 +656,7 @@ main h2 ::before{
         position: relative;
         top: 20px;
     }
-    
+
     .about .content .cols .box {
         height: 250px;
     }
@@ -565,17 +665,21 @@ main h2 ::before{
         width: 260px;
         padding: 18px;
     }
+
     .galerie .content .frame {
         width: 350px;
         padding: 15px 15px 40px 15px;
         margin: 10px 5px;
     }
+
     .galerie .content .frame .box {
         height: 200px;
     }
+
     .trainers .content .frame a {
         border: 1.5px solid var(--prime);
     }
+
     .join-us.view {
         padding: 20px 0;
     }
@@ -613,38 +717,7 @@ main h2 ::before{
     .join-us button {
         width: 100%;
     }
-    .faq h3 {
-        font-size: 16px;
-    }
 
-    .faq p {
-        font-size: 14px;
-    }
-    .faq .faq-toggle {
-        cursor: pointer;
-        background: #333;
-        color: var(--prime);
-        border: none;
-        border-radius: 5px;
-        font-size: 18px;
-        padding: 10px;
-        width: 100%;
-        text-align: left;
-        margin: 0;
-        outline: none;
-        user-select: none;
-    }
-    
-    .faq .faq-content {
-        display: none;
-        font-size: 16px;
-        margin-top: 10px;
-        padding: 10px;
-        background: #222;
-        border-radius: 5px;
-    }    
+
+
 }
-
-
-
-
